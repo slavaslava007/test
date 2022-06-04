@@ -35,7 +35,7 @@ test("test city should contains 3 houses", () => {
 test.skip("test city should contains hospital and fire station", () => {
     expect(city.governmentBuildings.length).toBe(2);
 
-    expect(city.governmentBuildings[0].type).toBe("HOSPITAL");
+    expect(city.governmentBuildings[0].type).toBe("HOSPITAL")   ;
     expect(city.governmentBuildings[0].budget).toBe(200000);
     expect(city.governmentBuildings[0].staffCount).toBe(200);
     expect(city.governmentBuildings[0].address.street.title).toBe("Central Str");
