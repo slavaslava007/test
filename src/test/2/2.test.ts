@@ -1,61 +1,46 @@
-import {mult, splitintoWord, sum} from "./1";
+let city: CityType;
 
-let  a:number;
-let  b:number;
-let  c:number;
-
-beforeEach(()=>{
-    a=1;
-    b=2;
-    c=3;
+beforeEach(() => {
+    city = {
+        title: "New York",
+        houses: [],
+        governmentBuildings: [],
+        citizensNumber: 1000000
+    }
 })
 
-test ('sum shold be correct',()=>{
+// 01. создайте тип CityType
+// 02. заполните объект city, чтобы тесты ниже прошли
+test("test city should contains 3 houses", () => {
+    expect(city.houses.length).toBe(3);
 
+    expect(city.houses[0].buildedAt).toBe(2012);
+    expect(city.houses[0].repaired).toBe(false);
+    expect(city.houses[0].address.number).toBe(100);
+    expect(city.houses[0].address.street.title).toBe("White street");
 
-    const result=sum(a,b);
-    const result1=sum(b,c);
+    expect(city.houses[1].buildedAt).toBe(2008);
+    expect(city.houses[1].repaired).toBe(false);
+    expect(city.houses[1].address.number).toBe(100);
+    expect(city.houses[1].address.street.title).toBe("Happy street");
 
-    //expect
-    expect(result).toBe(3)
-    expect(result1).toBe(5)
+    expect(city.houses[2].buildedAt).toBe(2020);
+    expect(city.houses[2].repaired).toBe(false);
+    expect(city.houses[2].address.number).toBe(101);
+    expect(city.houses[2].address.street.title).toBe("Happy street");
 })
 
-test ('sum shold be correct',()=>{
-    const  a=1;
-    const  b=2;
-    const  c=3;
+// 01. дополните тип GovernmentBuildingType
+// 02. заполните объект city, чтобы тесты ниже прошли
+test.skip("test city should contains hospital and fire station", () => {
+    expect(city.governmentBuildings.length).toBe(2);
 
-    const result=mult(a,b);
-    const result1=mult(b,c);
+    expect(city.governmentBuildings[0].type).toBe("HOSPITAL");
+    expect(city.governmentBuildings[0].budget).toBe(200000);
+    expect(city.governmentBuildings[0].staffCount).toBe(200);
+    expect(city.governmentBuildings[0].address.street.title).toBe("Central Str");
 
-    //expect
-    expect(result).toBe(2)
-    expect(result1).toBe(6)
-})
-
-
-test('splitting into words should be correct',()=>{
-
-    //data
-    const sent="Hello my friends"
-    const sent2='JS - best programming language.'
-
-    //action
-    const result1=splitintoWord(sent);
-    const result2=splitintoWord(sent2);
-
-    // expect
-    expect(result1.length).toBe(3);
-    expect(result1[0]).toBe('hello');
-    expect(result1[1]).toBe('my');
-    expect(result1[2]).toBe('friends');
-
-
-    expect(result2.length).toBe(4);
-    expect(result2[0]).toBe('JS');
-    expect(result2[1]).toBe('best');
-    expect(result2[2]).toBe('programming');
-    expect(result2[3]).toBe('language');
-
-})
+    expect(city.governmentBuildings[1].type).toBe("FIRE-STATION");
+    expect(city.governmentBuildings[1].budget).toBe(500000);
+    expect(city.governmentBuildings[1].staffCount).toBe(1000);
+    expect(city.governmentBuildings[1].address.street.title).toBe("South Str");
