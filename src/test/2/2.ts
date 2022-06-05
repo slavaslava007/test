@@ -10,7 +10,7 @@ type AdressType={
     street:string
     city:LocalCityType
 }
-type StudentType={
+export type ItincubatorType={
     id:number
     name:string
     age:number
@@ -19,7 +19,9 @@ type StudentType={
     tech:Array<Techtype>
 }
 
-const itincubator:StudentType = {
+
+
+ export const itincubator:ItincubatorType = {
     id:1,
     name: 'it-incubator',
     age: 1060,

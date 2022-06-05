@@ -10,17 +10,10 @@ export  function mult(a:number,b:number) {
 }
 
 export function splitintoWord(sentese:string) {
- const words=sentese.toLowerCase().split('')
-        return   words.filter(w=> w !=="")
+ const words=sentese.toLowerCase().split(' ')
+        return   words.filter(w=> w !=="" && w !== '-')
     .map(w=>w.replace('!',''))
 }
 
 
-
-
-// const sentense = 'Hello my friends!'
-//
-// function SplitIntoWord(sentense: string) {
-//     return ['hello', 'my', 'friends']
-// }
 

@@ -14,8 +14,9 @@ export  type AdressType = {
     street: TitleType
 }
 export  type HpuseType = {
+    id?:number
     buildedAt:number
-    repaired:false
+    repaired:boolean
     address: AdressType
 
 }

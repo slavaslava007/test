@@ -21,7 +21,7 @@ test ('sum shold be correct',()=>{
     expect(result1).toBe(5)
 })
 
-test ('sum shold be correct',()=>{
+test ('sum ',()=>{
     const  a=1;
     const  b=2;
     const  c=3;
@@ -39,7 +39,7 @@ test('splitting into words should be correct',()=>{
 
     //data
     const sent="Hello my friends"
-    const sent2='JS - best programming language.'
+    const sent2='JS - best programming language'
 
     //action
     const result1=splitintoWord(sent);
@@ -53,9 +53,8 @@ test('splitting into words should be correct',()=>{
 
 
     expect(result2.length).toBe(4);
-    expect(result2[0]).toBe('JS');
+    expect(result2[0]).toBe('js');
     expect(result2[1]).toBe('best');
     expect(result2[2]).toBe('programming');
     expect(result2[3]).toBe('language');
-
-})
+    })
